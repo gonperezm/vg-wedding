@@ -1,0 +1,114 @@
+:root {
+  /* Color Palette - Official */
+  --color-green-sage: #5F7F6A;
+  --color-green-dark: #1F3D2B;
+  --color-cream: #E6DCCB;
+  --color-charcoal: #4A4A46;
+  --color-gold: #B8A46A;
+  --color-bronze: #B87333;
+
+  /* Semantic Mapping */
+  --color-text-primary: var(--color-green-dark);
+  --color-text-secondary: var(--color-charcoal);
+  --color-bg-light: #FAFAFA;
+  /* Keeping a clean white/off-white for readability */
+  --color-bg-warm: var(--color-cream);
+  --color-accent: var(--color-gold);
+
+  /* Typography */
+  /* TAN Mon Cheri is a Display font (San-Serif/Serif mix). We use Playfair Display as a fallback for high-end look */
+  --font-heading: 'Playfair Display', serif;
+  /* The Seasons is a Serif font. We use Inter or Playfair as fallback. Using Playfair for both creates harmony */
+  --font-subheading: 'Playfair Display', serif;
+  --font-body: 'Inter', sans-serif;
+
+  /* Spacing */
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 32px;
+  --spacing-xl: 64px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-body);
+  color: var(--color-text-primary);
+  background-color: var(--color-bg-light);
+  font-size: 16px;
+}
+
+body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+p {
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  font-family: var(--font-body);
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+/* Utilities */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-serif {
+  font-family: var(--font-heading);
+}
+
+.text-gold {
+  color: var(--color-gold);
+}
+
+/* Animation Utility Info */
+/* We will use framer-motion for complex animations, but detailed CSS transitions here */
+.fade-in {
+  animation: fadeIn 1s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
