@@ -82,6 +82,49 @@ const EventDetails = () => {
                 </div>
 
             </div>
+            {/* Venue Images Showcase */}
+            <div style={{ marginTop: '60px', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '15px' }}>
+                <motion.div
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    style={{ borderRadius: '12px', overflow: 'hidden', height: '200px' }}
+                >
+                    <img
+                        src="/images/lasv1-1.png"
+                        alt="Capilla"
+                        style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                        loading="lazy"
+                    />
+                </motion.div>
+                <motion.div
+                    initial={{ opacity: 0, x: 20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    style={{ borderRadius: '12px', overflow: 'hidden', height: '200px' }}
+                >
+                    <img
+                        src="/images/lasv13-13.png"
+                        alt="Salón"
+                        style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                        loading="lazy"
+                    />
+                </motion.div>
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    style={{ gridColumn: '1 / -1', borderRadius: '12px', overflow: 'hidden', height: '200px' }}
+                >
+                    <img
+                        src="/images/lasv111.png"
+                        alt="Capilla Detalle"
+                        style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center 30%' }}
+                        loading="lazy"
+                    />
+                </motion.div>
+            </div>
+
             {/* Background decoration */}
             <img src="/images/14.png" alt="" style={{
                 position: 'absolute',

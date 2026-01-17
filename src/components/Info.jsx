@@ -11,8 +11,23 @@ const Info = () => {
     ];
 
     return (
-        <section id="info" style={{ padding: '80px 20px', background: 'var(--color-bg-warm)' }}>
-            <div className="container">
+        <section id="info" style={{ padding: '80px 20px', background: 'var(--color-bg-warm)', position: 'relative', overflow: 'hidden' }}>
+            {/* Environmental Background */}
+            <div style={{
+                position: 'absolute',
+                top: 0,
+                left: 0,
+                width: '100%',
+                height: '100%',
+                opacity: 0.15,
+                zIndex: 0,
+                backgroundImage: 'url("/images/cataratas v3.jpg")',
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                filter: 'grayscale(30%) sepia(20%)'
+            }}></div>
+
+            <div className="container" style={{ position: 'relative', zIndex: 1 }}>
                 <h2 className="text-center" style={{ fontSize: '2.5rem', marginBottom: '50px' }}>Información Útil</h2>
                 <div style={{
                     display: 'grid',
@@ -24,11 +39,12 @@ const Info = () => {
                             key={index}
                             whileHover={{ y: -5 }}
                             style={{
-                                background: 'white',
+                                background: 'rgba(255, 255, 255, 0.95)',
                                 padding: '30px',
                                 borderRadius: '12px',
                                 textAlign: 'center',
-                                boxShadow: '0 4px 15px rgba(0,0,0,0.05)'
+                                boxShadow: '0 4px 15px rgba(0,0,0,0.05)',
+                                backdropFilter: 'blur(5px)'
                             }}
                         >
                             <item.icon size={30} color="var(--color-gold)" style={{ marginBottom: '15px' }} />
