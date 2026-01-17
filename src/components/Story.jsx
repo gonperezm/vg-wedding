@@ -14,7 +14,8 @@ const stories = [
     {
         year: '2020',
         title: 'Primera Aventura Juntos',
-        text: 'Nuestro primer viaje a Bariloche. Descubrimos que éramos el equipo perfecto para cualquier aventura.'
+        text: 'Nuestro primer viaje a Bariloche. Descubrimos que éramos el equipo perfecto para cualquier aventura.',
+        image: '/images/brc gemini.png'
     },
     {
         year: '2023',
@@ -86,6 +87,16 @@ const Story = () => {
                             </span>
                             <h3 style={{ fontSize: '1.2rem', marginBottom: '10px' }}>{item.title}</h3>
                             <p>{item.text}</p>
+                            {item.image && (
+                                <div style={{ marginTop: '20px', width: '100%', borderRadius: '8px', overflow: 'hidden' }}>
+                                    <img
+                                        src={item.image}
+                                        alt={item.title}
+                                        style={{ width: '100%', height: 'auto', display: 'block' }}
+                                        loading="lazy"
+                                    />
+                                </div>
+                            )}
                         </motion.div>
                     ))}
                 </div>
