@@ -162,18 +162,13 @@ const RSVP = () => {
           font-weight: 500;
           color: var(--color-text-primary);
         }
-        input, textarea {
-          padding: 12px;
-          border: 1px solid #ddd;
-          border-radius: 8px;
-          font-family: var(--font-sans);
-          font-size: 1rem;
-          transition: border-color 0.3s;
+        .form-group label {
+          margin-bottom: 8px;
+          font-weight: 500;
+          color: var(--color-text-primary);
         }
-        input:focus, textarea:focus {
-          border-color: var(--color-gold);
-          outline: none;
-        }
+        /* input/textarea styles handled globally in index.css */
+        
         .submit-btn {
           margin-top: 20px;
           background: var(--color-gold);
