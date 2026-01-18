@@ -60,8 +60,8 @@ const Hero = () => {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 1 }}
                         style={{
-                            fontFamily: "'Open Sans', sans-serif",
-                            fontWeight: 300,
+                            fontFamily: "var(--font-heading)",
+                            fontWeight: "var(--font-weight-light)",
                             fontSize: '0.9rem',
                             letterSpacing: '0.4em',
                             margin: 0,
@@ -78,7 +78,7 @@ const Hero = () => {
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 1.5, delay: 0.3, ease: "easeOut" }}
                         style={{
-                            margin: '0', /* Resetting margin to see how the new cropped image fits */
+                            margin: '0',
                             zIndex: 2
                         }}
                     >
@@ -88,7 +88,7 @@ const Hero = () => {
                             animate={{ y: [0, -5, 0] }}
                             transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
                             style={{
-                                width: '100vw', /* Slightly larger if needed */
+                                width: '100vw',
                                 maxWidth: '600px',
                                 height: 'auto',
                                 display: 'block'
@@ -103,8 +103,8 @@ const Hero = () => {
                             animate={{ opacity: 1 }}
                             transition={{ duration: 1, delay: 0.8 }}
                             style={{
-                                fontFamily: "'Open Sans', sans-serif",
-                                fontWeight: 300, /* Strict Light */
+                                fontFamily: "var(--font-heading)",
+                                fontWeight: "var(--font-weight-light)",
                                 fontSize: '1.2rem',
                                 margin: 0,
                                 color: '#4a4a46'
@@ -118,8 +118,8 @@ const Hero = () => {
                             animate={{ opacity: 1 }}
                             transition={{ duration: 1, delay: 1 }}
                             style={{
-                                fontFamily: "'Open Sans', sans-serif",
-                                fontWeight: 300, /* Strict Light */
+                                fontFamily: "var(--font-heading)",
+                                fontWeight: "var(--font-weight-light)",
                                 fontSize: '0.85rem',
                                 letterSpacing: '0.4em',
                                 textTransform: 'uppercase',
