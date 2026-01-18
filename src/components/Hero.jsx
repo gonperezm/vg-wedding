@@ -56,68 +56,36 @@ const Hero = () => {
                     style={{
                         fontFamily: 'var(--font-heading)',
                         fontWeight: 'var(--font-weight-light)',
-                        fontSize: '1.5rem',
-                        letterSpacing: '0.1em',
-                        marginBottom: '1rem',
-                        textTransform: 'uppercase', /* Requested Uppercase */
-                        color: 'var(--color-text-secondary)'
+                        fontSize: '1.2rem', /* Slightly adjusted for balance with wide spacing */
+                        letterSpacing: '0.3em', /* Matches IGUAZU */
+                        marginBottom: '1.5rem',
+                        textTransform: 'uppercase',
+                        color: '#4a4a46' /* Requested color */
                     }}
                 >
                     NOS CASAMOS
                 </motion.h2>
 
-                {/* Names with Floating Animation */}
+                {/* Names Image with Floating Animation */}
                 <motion.div
                     initial={{ opacity: 0, scale: 0.95 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 1.5, delay: 0.5, ease: "easeOut" }}
                     style={{ marginBottom: '1.5rem' }}
                 >
-                    <motion.div
+                    <motion.img
+                        src="/images/vickyygon.png"
+                        alt="Vicky & Gon"
                         animate={{ y: [0, -10, 0] }}
                         transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
                         style={{
-                            display: 'flex',
-                            alignItems: 'baseline',
-                            justifyContent: 'center',
-                            gap: '1rem',
-                            flexWrap: 'wrap'
+                            width: '80vw',
+                            maxWidth: '500px',
+                            height: 'auto',
+                            display: 'block',
+                            margin: '0 auto'
                         }}
-                    >
-                        <span style={{
-                            fontFamily: 'var(--font-names)',
-                            fontSize: 'clamp(2.5rem, 5vw, 4.5rem)',
-                            color: 'var(--color-text-primary)'
-                        }}>
-                            VICKY
-                        </span>
-
-                        {/* Ampersand Image '1.png' - tinted gold via filter if needed, adjusting size */}
-                        <div style={{
-                            width: 'clamp(30px, 6vw, 60px)',
-                            display: 'flex',
-                            alignItems: 'center',
-                            justifyContent: 'center'
-                        }}>
-                            <img
-                                src="/images/1.png"
-                                alt="&"
-                                style={{
-                                    width: '100%',
-                                    height: 'auto',
-                                    filter: 'sepia(100%) saturate(300%) hue-rotate(5deg) brightness(0.9)' /* Attempting gold-ish tint if image is b/w */
-                                }}
-                            />
-                        </div>
-
-                        <span style={{
-                            fontFamily: 'var(--font-names)',
-                            fontSize: 'clamp(2.5rem, 5vw, 4.5rem)',
-                            color: 'var(--color-text-primary)'
-                        }}>
-                            GON
-                        </span>
-                    </motion.div>
+                    />
                 </motion.div>
 
                 {/* Date */}
@@ -130,7 +98,7 @@ const Hero = () => {
                         fontWeight: 'var(--font-weight-light)',
                         fontSize: '1.25rem',
                         marginBottom: '0.5rem',
-                        color: 'var(--color-text-primary)'
+                        color: '#4a4a46' /* Requested color */
                     }}
                 >
                     Sábado 22 de agosto 2026
@@ -147,7 +115,7 @@ const Hero = () => {
                         fontSize: '1rem',
                         letterSpacing: '0.3em',
                         textTransform: 'uppercase',
-                        color: 'var(--color-text-secondary)'
+                        color: '#4a4a46' /* Requested color */
                     }}
                 >
                     IGUAZÚ
