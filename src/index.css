@@ -16,11 +16,16 @@
   --color-accent: var(--color-gold);
 
   /* Typography */
-  /* TAN Mon Cheri is a Display font (San-Serif/Serif mix). We use Playfair Display as a fallback for high-end look */
-  --font-heading: 'Playfair Display', serif;
-  /* The Seasons is a Serif font. We use Inter or Playfair as fallback. Using Playfair for both creates harmony */
-  --font-subheading: 'Playfair Display', serif;
-  --font-body: 'Inter', sans-serif;
+  /* Hero & Invitation Style Fonts */
+  --font-names: 'Tan Mon Cheri', 'Playfair Display', serif;
+  /* Custom font, fallback to Playfair */
+  --font-ampersand: 'The Seasons', 'Playfair Display', serif;
+  /* Custom font, fallback to Playfair */
+
+  /* Global Main Typography */
+  --font-heading: 'Open Sans', sans-serif;
+  --font-body: 'Open Sans', sans-serif;
+  --font-weight-light: 300;
 
   /* Spacing */
   --spacing-sm: 8px;
@@ -55,7 +60,7 @@ h4,
 h5,
 h6 {
   font-family: var(--font-heading);
-  font-weight: 400;
+  font-weight: var(--font-weight-light);
   line-height: 1.2;
 }
 

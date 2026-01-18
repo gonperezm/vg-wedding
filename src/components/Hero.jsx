@@ -11,7 +11,8 @@ const Hero = () => {
             flexDirection: 'column',
             justifyContent: 'center',
             alignItems: 'center',
-            background: 'linear-gradient(to bottom, var(--color-bg-warm), #fff)'
+            background: 'linear-gradient(to bottom, var(--color-bg-warm), #fff)',
+            textAlign: 'center'
         }}>
             {/* Background Decorative Layers */}
             <motion.img
@@ -44,94 +45,110 @@ const Hero = () => {
                 transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
             />
 
-            {/* Main Content */}
-            <div className="container" style={{ position: 'relative', zIndex: 1, textAlign: 'center' }}>
+            {/* Invitation Main Block */}
+            <div className="container" style={{ position: 'relative', zIndex: 1 }}>
 
-                {/* Animated Logo VG */}
-                <motion.div
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 1.5, ease: "easeOut" }}
-                    style={{ marginBottom: '2rem' }}
-                >
-                    <motion.img
-                        src="/images/3.png"
-                        alt="V&G Logo"
-                        animate={{
-                            y: [0, -15, 0]
-                        }}
-                        transition={{
-                            duration: 2.5,
-                            repeat: Infinity,
-                            ease: "easeInOut"
-                        }}
-                        style={{
-                            width: '200px',
-                            height: 'auto',
-                            display: 'block',
-                            margin: '0 auto',
-                            filter: 'drop-shadow(0 4px 6px rgba(0,0,0,0.1))'
-                        }}
-                    />
-                </motion.div>
-
+                {/* Title */}
                 <motion.h2
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.5, duration: 1 }}
+                    transition={{ duration: 1 }}
                     style={{
-                        fontSize: '2rem',
-                        letterSpacing: '0.2em',
+                        fontFamily: 'var(--font-heading)',
+                        fontWeight: 'var(--font-weight-light)',
+                        fontSize: '1.5rem',
+                        letterSpacing: '0.1em',
                         marginBottom: '1rem',
-                        textTransform: 'uppercase'
+                        textTransform: 'none', /* Elegant refined look often lowercase or normal ease */
+                        color: 'var(--color-text-secondary)'
                     }}
                 >
-                    Nos Casamos
+                    Nos casamos
                 </motion.h2>
 
+                {/* Names with Floating Animation */}
+                <motion.div
+                    initial={{ opacity: 0, scale: 0.95 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 1.5, delay: 0.5, ease: "easeOut" }}
+                    style={{ marginBottom: '1.5rem' }}
+                >
+                    <motion.div
+                        animate={{ y: [0, -10, 0] }}
+                        transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                        style={{
+                            display: 'flex',
+                            alignItems: 'baseline',
+                            justifyContent: 'center',
+                            gap: '0.5rem',
+                            flexWrap: 'wrap'
+                        }}
+                    >
+                        <span style={{
+                            fontFamily: 'var(--font-names)',
+                            fontSize: 'clamp(2.5rem, 5vw, 4.5rem)', /* Responsive scaling */
+                            color: 'var(--color-text-primary)'
+                        }}>
+                            VICKY
+                        </span>
+
+                        <span style={{
+                            fontFamily: 'var(--font-ampersand)',
+                            fontSize: 'clamp(1.6rem, 3.3vw, 3rem)', /* ~1.5 ratio smaller */
+                            fontStyle: 'italic',
+                            color: 'var(--color-gold)',
+                            margin: '0 0.5rem'
+                        }}>
+                            &
+                        </span>
+
+                        <span style={{
+                            fontFamily: 'var(--font-names)',
+                            fontSize: 'clamp(2.5rem, 5vw, 4.5rem)',
+                            color: 'var(--color-text-primary)'
+                        }}>
+                            GON
+                        </span>
+                    </motion.div>
+                </motion.div>
+
+                {/* Date */}
                 <motion.p
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
-                    transition={{ delay: 0.8, duration: 1 }}
-                    style={{ fontSize: '1.2rem', marginBottom: '0.5rem' }}
+                    transition={{ duration: 1, delay: 1 }}
+                    style={{
+                        fontFamily: 'var(--font-heading)',
+                        fontWeight: 'var(--font-weight-light)',
+                        fontSize: '1.25rem',
+                        marginBottom: '0.5rem',
+                        color: 'var(--color-text-primary)'
+                    }}
                 >
-                    Sábado, 22 de Agosto 2026
+                    Sábado 22 de Agosto
                 </motion.p>
 
+                {/* Location */}
                 <motion.p
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
-                    transition={{ delay: 1, duration: 1 }}
+                    transition={{ duration: 1, delay: 1.2 }}
                     style={{
+                        fontFamily: 'var(--font-heading)',
+                        fontWeight: 'var(--font-weight-light)',
                         fontSize: '1rem',
-                        color: 'var(--color-text-secondary)',
-                        marginBottom: '2rem',
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        gap: '5px'
+                        letterSpacing: '0.3em',
+                        textTransform: 'uppercase',
+                        color: 'var(--color-text-secondary)'
                     }}
                 >
-                    <span>📍</span> Foz do Iguaçu, Brasil
+                    IGUAZÚ
                 </motion.p>
 
-                <Countdown />
-
-                <motion.p
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ delay: 1.5, duration: 1 }}
-                    style={{
-                        marginTop: '3rem',
-                        maxWidth: '600px',
-                        marginLeft: 'auto',
-                        marginRight: 'auto',
-                        fontStyle: 'italic',
-                        fontSize: '0.9rem'
-                    }}
-                >
-                    “Gracias por ser parte de esta etapa tan importante para nosotros. Nos emociona compartir este día con vos. 💛”
-                </motion.p>
+                {/* Countdown (Kept subtle below) */}
+                <div style={{ marginTop: '3rem', transform: 'scale(0.8)' }}>
+                    <Countdown />
+                </div>
             </div>
 
         </section>
