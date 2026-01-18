@@ -105,12 +105,14 @@ const Hero = () => {
                             style={{
                                 fontFamily: "var(--font-heading)",
                                 fontWeight: "var(--font-weight-light)",
-                                fontSize: '1.2rem',
+                                fontSize: '1rem', /* Adjusted for better symmetry with others */
+                                letterSpacing: '0.4em',
+                                textTransform: 'uppercase',
                                 margin: 0,
                                 color: '#4a4a46'
                             }}
                         >
-                            Sábado, 22 de agosto 2026
+                            Sábado 22 de agosto 2026
                         </motion.p>
 
                         <motion.p
