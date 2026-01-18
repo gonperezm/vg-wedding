@@ -72,24 +72,24 @@ const Hero = () => {
                         NOS CASAMOS
                     </motion.h2>
 
-                    {/* Central Image 1.png */}
+                    {/* Central Image vickigonvickigon.png */}
                     <motion.div
                         initial={{ opacity: 0, scale: 0.98 }}
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 1.5, delay: 0.3, ease: "easeOut" }}
                         style={{
-                            margin: '-28% 0', /* Aggressive crop to remove empty transparent space */
+                            margin: '0', /* Resetting margin to see how the new cropped image fits */
                             zIndex: 2
                         }}
                     >
                         <motion.img
-                            src="/images/1.png"
-                            alt="V&G"
+                            src="/images/vickigonvickigon.png"
+                            alt="Vicky & Gon"
                             animate={{ y: [0, -5, 0] }}
                             transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
                             style={{
-                                width: '90vw',
-                                maxWidth: '500px',
+                                width: '100vw', /* Slightly larger if needed */
+                                maxWidth: '600px',
                                 height: 'auto',
                                 display: 'block'
                             }}
@@ -104,7 +104,7 @@ const Hero = () => {
                             transition={{ duration: 1, delay: 0.8 }}
                             style={{
                                 fontFamily: "'Open Sans', sans-serif",
-                                fontWeight: 300,
+                                fontWeight: 300, /* Strict Light */
                                 fontSize: '1.2rem',
                                 margin: 0,
                                 color: '#4a4a46'
@@ -119,7 +119,7 @@ const Hero = () => {
                             transition={{ duration: 1, delay: 1 }}
                             style={{
                                 fontFamily: "'Open Sans', sans-serif",
-                                fontWeight: 300,
+                                fontWeight: 300, /* Strict Light */
                                 fontSize: '0.85rem',
                                 letterSpacing: '0.4em',
                                 textTransform: 'uppercase',
