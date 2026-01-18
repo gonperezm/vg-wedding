@@ -25,7 +25,8 @@ const stories = [
     {
         year: '2025',
         title: 'La Propuesta',
-        text: 'En Mendoza, entre viñedos y la paz de los Andes, Gon le propuso matrimonio a Vicky bajo un atardecer inolvidable.'
+        text: 'En Mendoza, entre viñedos y la paz de los Andes, Gon le propuso matrimonio a Vicky bajo un atardecer inolvidable.',
+        image: '/images/mendoza1.JPG'
     },
     {
         year: '2026',
