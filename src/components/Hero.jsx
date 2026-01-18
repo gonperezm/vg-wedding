@@ -11,7 +11,7 @@ const Hero = () => {
             flexDirection: 'column',
             justifyContent: 'center',
             alignItems: 'center',
-            backgroundImage: 'url("/images/brc gemini.png")',
+            backgroundImage: 'url("/images/portada posible.png")',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             textAlign: 'center'
