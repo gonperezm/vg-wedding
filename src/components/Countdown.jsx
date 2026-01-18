@@ -35,7 +35,7 @@ const Countdown = () => {
     ];
 
     return (
-        <div style={{ display: 'flex', gap: '20px', justifyContent: 'center', marginTop: '20px' }}>
+        <div style={{ display: 'flex', gap: '12px', justifyContent: 'center', marginTop: '20px' }}>
             {timeUnits.map((unit, index) => (
                 <motion.div
                     key={index}

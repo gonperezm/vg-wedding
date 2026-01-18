@@ -46,13 +46,19 @@ const Hero = () => {
             />
 
             {/* Invitation Main Block */}
-            <div className="container" style={{ position: 'relative', zIndex: 1 }}>
+            <div className="container" style={{
+                position: 'relative',
+                zIndex: 1,
+                width: '100%',
+                padding: '0 20px'
+            }}>
 
                 <div style={{
                     display: 'flex',
                     flexDirection: 'column',
                     alignItems: 'center',
-                    gap: '0.8rem' /* Very tight gaps */
+                    gap: '0.6rem', /* Slightly tighter gaps for better fit */
+                    width: '100%'
                 }}>
                     {/* Title */}
                     <motion.h2
@@ -62,7 +68,7 @@ const Hero = () => {
                         style={{
                             fontFamily: "var(--font-heading)",
                             fontWeight: "var(--font-weight-light)",
-                            fontSize: '0.9rem',
+                            fontSize: 'clamp(0.8rem, 2.5vw, 1rem)',
                             letterSpacing: '0.4em',
                             margin: 0,
                             textTransform: 'uppercase',
@@ -79,7 +85,9 @@ const Hero = () => {
                         transition={{ duration: 1.5, delay: 0.3, ease: "easeOut" }}
                         style={{
                             margin: '0',
-                            zIndex: 2
+                            zIndex: 2,
+                            width: '100%',
+                            maxWidth: '550px' /* Reduced slightly for safety */
                         }}
                     >
                         <motion.img
@@ -88,16 +96,22 @@ const Hero = () => {
                             animate={{ y: [0, -5, 0] }}
                             transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
                             style={{
-                                width: '100vw',
-                                maxWidth: '600px',
+                                width: '100%',
                                 height: 'auto',
-                                display: 'block'
+                                display: 'block',
+                                margin: '0 auto'
                             }}
                         />
                     </motion.div>
 
                     {/* Date & Location Group */}
-                    <div style={{ display: 'flex', flexDirection: 'column', gap: '0.3rem', alignItems: 'center' }}>
+                    <div style={{
+                        display: 'flex',
+                        flexDirection: 'column',
+                        gap: '0.2rem',
+                        alignItems: 'center',
+                        width: '100%'
+                    }}>
                         <motion.p
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
@@ -105,11 +119,11 @@ const Hero = () => {
                             style={{
                                 fontFamily: "var(--font-heading)",
                                 fontWeight: "var(--font-weight-light)",
-                                fontSize: '1.1rem',
-                                letterSpacing: '0.2em',
-                                textTransform: 'none',
+                                fontSize: 'clamp(1rem, 3vw, 1.2rem)',
+                                letterSpacing: '0.1em',
                                 margin: 0,
-                                color: '#4a4a46'
+                                color: '#4a4a46',
+                                whiteSpace: 'nowrap'
                             }}
                         >
                             Sábado, 22 de agosto 2026
@@ -122,7 +136,7 @@ const Hero = () => {
                             style={{
                                 fontFamily: "var(--font-heading)",
                                 fontWeight: "var(--font-weight-light)",
-                                fontSize: '0.85rem',
+                                fontSize: 'clamp(0.7rem, 2vw, 0.9rem)',
                                 letterSpacing: '0.4em',
                                 textTransform: 'uppercase',
                                 margin: 0,
@@ -133,9 +147,16 @@ const Hero = () => {
                         </motion.p>
                     </div>
 
-                    {/* Countdown (Tighter wrap) */}
-                    <div style={{ marginTop: '1.5rem', transform: 'scale(0.8)' }}>
-                        <Countdown />
+                    {/* Countdown (Responsive scale) */}
+                    <div style={{
+                        marginTop: '1.2rem',
+                        width: '100%',
+                        display: 'flex',
+                        justifyContent: 'center'
+                    }}>
+                        <div style={{ transform: 'scale(0.85)' }}>
+                            <Countdown />
+                        </div>
                     </div>
                 </div>
             </div>
