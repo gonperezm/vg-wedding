@@ -59,11 +59,11 @@ const Hero = () => {
                         fontSize: '1.5rem',
                         letterSpacing: '0.1em',
                         marginBottom: '1rem',
-                        textTransform: 'none', /* Elegant refined look often lowercase or normal ease */
+                        textTransform: 'uppercase', /* Requested Uppercase */
                         color: 'var(--color-text-secondary)'
                     }}
                 >
-                    Nos casamos
+                    NOS CASAMOS
                 </motion.h2>
 
                 {/* Names with Floating Animation */}
@@ -80,27 +80,35 @@ const Hero = () => {
                             display: 'flex',
                             alignItems: 'baseline',
                             justifyContent: 'center',
-                            gap: '0.5rem',
+                            gap: '1rem',
                             flexWrap: 'wrap'
                         }}
                     >
                         <span style={{
                             fontFamily: 'var(--font-names)',
-                            fontSize: 'clamp(2.5rem, 5vw, 4.5rem)', /* Responsive scaling */
+                            fontSize: 'clamp(2.5rem, 5vw, 4.5rem)',
                             color: 'var(--color-text-primary)'
                         }}>
                             VICKY
                         </span>
 
-                        <span style={{
-                            fontFamily: 'var(--font-ampersand)',
-                            fontSize: 'clamp(1.6rem, 3.3vw, 3rem)', /* ~1.5 ratio smaller */
-                            fontStyle: 'italic',
-                            color: 'var(--color-gold)',
-                            margin: '0 0.5rem'
+                        {/* Ampersand Image '1.png' - tinted gold via filter if needed, adjusting size */}
+                        <div style={{
+                            width: 'clamp(30px, 6vw, 60px)',
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center'
                         }}>
-                            &
-                        </span>
+                            <img
+                                src="/images/1.png"
+                                alt="&"
+                                style={{
+                                    width: '100%',
+                                    height: 'auto',
+                                    filter: 'sepia(100%) saturate(300%) hue-rotate(5deg) brightness(0.9)' /* Attempting gold-ish tint if image is b/w */
+                                }}
+                            />
+                        </div>
 
                         <span style={{
                             fontFamily: 'var(--font-names)',
@@ -125,7 +133,7 @@ const Hero = () => {
                         color: 'var(--color-text-primary)'
                     }}
                 >
-                    Sábado 22 de Agosto
+                    Sábado 22 de agosto 2026
                 </motion.p>
 
                 {/* Location */}

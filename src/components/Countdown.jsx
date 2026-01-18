@@ -45,17 +45,22 @@ const Countdown = () => {
                     style={{ textAlign: 'center' }}
                 >
                     <div style={{
-                        fontSize: '1.5rem',
-                        fontFamily: 'var(--font-serif)',
+                        fontSize: '1.8rem',
+                        fontFamily: 'var(--font-ampersand)', /* Using The Seasons as requested */
                         color: 'var(--color-gold)',
-                        fontWeight: 'bold'
+                        fontWeight: 'normal', /* Serif fonts often look better regular */
+                        lineHeight: 1
                     }}>
                         {unit.value < 10 ? `0${unit.value}` : unit.value}
                     </div>
                     <div style={{
-                        fontSize: '0.7rem',
-                        letterSpacing: '1px',
-                        color: 'var(--color-text-secondary)'
+                        fontSize: '0.65rem',
+                        letterSpacing: '2px',
+                        fontFamily: 'var(--font-body)', /* Open Sans */
+                        fontWeight: '300', /* Light */
+                        textTransform: 'uppercase',
+                        color: 'var(--color-text-secondary)',
+                        marginTop: '5px'
                     }}>
                         {unit.label}
                     </div>
