@@ -78,7 +78,7 @@ const Hero = () => {
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 1.5, delay: 0.3, ease: "easeOut" }}
                         style={{
-                            margin: '-15% 0', /* Negative margins to "crop" transparent space vertically */
+                            margin: '-28% 0', /* Aggressive crop to remove empty transparent space */
                             zIndex: 2
                         }}
                     >
