@@ -11,39 +11,20 @@ const Hero = () => {
             flexDirection: 'column',
             justifyContent: 'center',
             alignItems: 'center',
-            background: 'linear-gradient(to bottom, var(--color-bg-warm), #fff)',
+            backgroundImage: 'url("/images/brc gemini.png")',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
             textAlign: 'center'
         }}>
-            {/* Background Decorative Layers */}
-            <motion.img
-                src="/images/10.png"
-                alt="Decoration"
-                style={{
-                    position: 'absolute',
-                    top: '-10%',
-                    right: '-10%',
-                    width: '50vw',
-                    opacity: 0.1,
-                    pointerEvents: 'none'
-                }}
-                animate={{ y: [0, -20, 0] }}
-                transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-            />
-            <motion.img
-                src="/images/11.png"
-                alt="Decoration"
-                style={{
-                    position: 'absolute',
-                    bottom: '-10%',
-                    left: '-10%',
-                    width: '60vw',
-                    opacity: 0.1,
-                    pointerEvents: 'none',
-                    transform: 'rotate(180deg)'
-                }}
-                animate={{ y: [0, 20, 0] }}
-                transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
-            />
+            {/* Overlay for readability */}
+            <div style={{
+                position: 'absolute',
+                inset: 0,
+                backgroundColor: 'rgba(255, 255, 255, 0.45)', /* Creamy/White overlay */
+                backdropFilter: 'blur(1px)', /* Very subtle blur for depth */
+                zIndex: 0
+            }} />
+
 
             {/* Invitation Main Block */}
             <div className="container" style={{
