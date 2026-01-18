@@ -54,27 +54,27 @@ const Hero = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1 }}
                     style={{
-                        fontFamily: 'var(--font-heading)',
-                        fontWeight: 'var(--font-weight-light)',
-                        fontSize: '1.2rem', /* Slightly adjusted for balance with wide spacing */
-                        letterSpacing: '0.3em', /* Matches IGUAZU */
-                        marginBottom: '1.5rem',
+                        fontFamily: "'Open Sans', sans-serif",
+                        fontWeight: 300,
+                        fontSize: '1.5rem',
+                        letterSpacing: '0.2em',
+                        marginBottom: '2rem',
                         textTransform: 'uppercase',
-                        color: '#4a4a46' /* Requested color */
+                        color: '#4a4a46'
                     }}
                 >
                     NOS CASAMOS
                 </motion.h2>
 
-                {/* Names Image with Floating Animation */}
+                {/* Central Image 1.png */}
                 <motion.div
                     initial={{ opacity: 0, scale: 0.95 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 1.5, delay: 0.5, ease: "easeOut" }}
-                    style={{ marginBottom: '1.5rem' }}
+                    style={{ marginBottom: '2rem' }}
                 >
                     <motion.img
-                        src="/images/vickyygon.png"
+                        src="/images/1.png"
                         alt="Vicky & Gon"
                         animate={{ y: [0, -10, 0] }}
                         transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
@@ -94,14 +94,14 @@ const Hero = () => {
                     animate={{ opacity: 1 }}
                     transition={{ duration: 1, delay: 1 }}
                     style={{
-                        fontFamily: 'var(--font-heading)',
-                        fontWeight: 'var(--font-weight-light)',
+                        fontFamily: "'Open Sans', sans-serif",
+                        fontWeight: 300,
                         fontSize: '1.25rem',
                         marginBottom: '0.5rem',
-                        color: '#4a4a46' /* Requested color */
+                        color: '#4a4a46'
                     }}
                 >
-                    Sábado 22 de agosto 2026
+                    Sábado, 22 de agosto 2026
                 </motion.p>
 
                 {/* Location */}
@@ -110,12 +110,12 @@ const Hero = () => {
                     animate={{ opacity: 1 }}
                     transition={{ duration: 1, delay: 1.2 }}
                     style={{
-                        fontFamily: 'var(--font-heading)',
-                        fontWeight: 'var(--font-weight-light)',
+                        fontFamily: "'Open Sans', sans-serif",
+                        fontWeight: 300,
                         fontSize: '1rem',
                         letterSpacing: '0.3em',
                         textTransform: 'uppercase',
-                        color: '#4a4a46' /* Requested color */
+                        color: '#4a4a46'
                     }}
                 >
                     IGUAZÚ
