@@ -50,15 +50,15 @@ const Hero = () => {
 
                 {/* Title */}
                 <motion.h2
-                    initial={{ opacity: 0, y: 20 }}
+                    initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1 }}
                     style={{
                         fontFamily: "'Open Sans', sans-serif",
                         fontWeight: 300,
-                        fontSize: '1.5rem',
-                        letterSpacing: '0.2em',
-                        marginBottom: '2rem',
+                        fontSize: '1rem', /* Reduced for better balance */
+                        letterSpacing: '0.4em', /* More elegant spacing */
+                        marginBottom: '0.5rem', /* Much tighter */
                         textTransform: 'uppercase',
                         color: '#4a4a46'
                     }}
@@ -68,19 +68,19 @@ const Hero = () => {
 
                 {/* Central Image 1.png */}
                 <motion.div
-                    initial={{ opacity: 0, scale: 0.95 }}
+                    initial={{ opacity: 0, scale: 0.98 }}
                     animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 1.5, delay: 0.5, ease: "easeOut" }}
-                    style={{ marginBottom: '2rem' }}
+                    transition={{ duration: 1.5, delay: 0.3, ease: "easeOut" }}
+                    style={{ marginBottom: '1rem' }} /* Tighter gap */
                 >
                     <motion.img
                         src="/images/1.png"
                         alt="Vicky & Gon"
-                        animate={{ y: [0, -10, 0] }}
-                        transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                        animate={{ y: [0, -8, 0] }} /* Subtle floating */
+                        transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
                         style={{
-                            width: '80vw',
-                            maxWidth: '500px',
+                            width: '85vw',
+                            maxWidth: '550px',
                             height: 'auto',
                             display: 'block',
                             margin: '0 auto'
@@ -92,12 +92,12 @@ const Hero = () => {
                 <motion.p
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
-                    transition={{ duration: 1, delay: 1 }}
+                    transition={{ duration: 1, delay: 0.8 }}
                     style={{
                         fontFamily: "'Open Sans', sans-serif",
                         fontWeight: 300,
-                        fontSize: '1.25rem',
-                        marginBottom: '0.5rem',
+                        fontSize: '1.2rem',
+                        marginBottom: '0.2rem',
                         color: '#4a4a46'
                     }}
                 >
@@ -108,11 +108,11 @@ const Hero = () => {
                 <motion.p
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
-                    transition={{ duration: 1, delay: 1.2 }}
+                    transition={{ duration: 1, delay: 1 }}
                     style={{
                         fontFamily: "'Open Sans', sans-serif",
                         fontWeight: 300,
-                        fontSize: '1rem',
+                        fontSize: '0.9rem',
                         letterSpacing: '0.3em',
                         textTransform: 'uppercase',
                         color: '#4a4a46'
@@ -122,7 +122,7 @@ const Hero = () => {
                 </motion.p>
 
                 {/* Countdown (Kept subtle below) */}
-                <div style={{ marginTop: '3rem', transform: 'scale(0.8)' }}>
+                <div style={{ marginTop: '2.5rem', transform: 'scale(0.85)' }}>
                     <Countdown />
                 </div>
             </div>
