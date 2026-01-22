@@ -22,7 +22,7 @@ const RSVP = () => {
 
         try {
             const response = await fetch(
-                "https://script.google.com/macros/s/AKfycbx_vHq-MHyMulpfY7sj19G6-nEX6s5Y5oFyF_hRYA6YhSTW-KmBFKtizr5J7zFPIdS7/exec",
+                "https://script.google.com/macros/s/AKfycbze3sQ5ZQWyZVMUCq2udGXHLN_36efAGWyvPE_heDZ11cnlR_ueVONad8tz2iVYlvKM/exec",
                 {
                     method: "POST",
                     headers: {
