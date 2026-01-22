@@ -21,12 +21,13 @@ const RSVP = () => {
         e.preventDefault();
 
         try {
-            const response = await fetch(
+            await fetch(
                 "https://script.google.com/macros/s/AKfycbze3sQ5ZQWyZVMUCq2udGXHLN_36efAGWyvPE_heDZ11cnlR_ueVONad8tz2iVYlvKM/exec",
                 {
                     method: "POST",
+                    mode: "no-cors",
                     headers: {
-                        "Content-Type": "application/json"
+                        "Content-Type": "text/plain"
                     },
                     body: JSON.stringify({
                         name: formData.name,
@@ -36,34 +37,30 @@ const RSVP = () => {
                         companion: formData.companion,
                         diet: formData.diet,
                         message: formData.message,
-                        code: formData.code || "FREE"
+                        code: "FREE"
                     })
                 }
             );
 
-            const result = await response.json();
+            // ⚠️ con no-cors NO se puede leer response
+            alert("Gracias 💛 Tu respuesta fue registrada");
 
-            if (result.success) {
-                alert("Gracias 💛 Tu respuesta fue registrada");
+            setFormData({
+                name: '',
+                email: '',
+                phone: '',
+                attendance: 'yes',
+                companion: '',
+                diet: '',
+                message: ''
+            });
 
-                setFormData({
-                    name: '',
-                    email: '',
-                    phone: '',
-                    attendance: 'yes',
-                    companion: '',
-                    diet: '',
-                    message: '',
-                    code: ''
-                });
-            } else {
-                alert("Hubo un error al enviar el formulario 😢");
-            }
         } catch (error) {
-            console.error("RSVP error:", error);
+            console.error(error);
             alert("Error de conexión. Intentá nuevamente.");
         }
     };
+
 
 
     return (
