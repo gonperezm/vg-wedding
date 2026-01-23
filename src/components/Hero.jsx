@@ -75,7 +75,7 @@ const Hero = () => {
                             src="/images/vickigonvickigon.png"
                             alt="Vicky & Gon"
                             animate={{ y: [0, -5, 0] }}
-                            transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+                            transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut" }}
                             style={{
                                 width: '100%',
                                 height: 'auto',

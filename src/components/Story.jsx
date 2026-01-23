@@ -38,7 +38,7 @@ const stories = [
 const Story = () => {
     return (
         <section id="historia" style={{ padding: '80px 20px', position: 'relative', overflow: 'hidden' }}>
-            <div className="container">
+            <div className="container" style={{ maxWidth: '900px' }}>
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -49,19 +49,28 @@ const Story = () => {
                 >
                     <h2 style={{ fontSize: '2.5rem', marginBottom: '20px', color: 'var(--color-gold)' }}>Nuestra Historia de Amor</h2>
                     <p style={{ maxWidth: '700px', margin: '0 auto', fontSize: '1.1rem', fontStyle: 'italic' }}>
-                        “Dicen que algunas historias se escriben solas… la nuestra se escribió en risas, viajes, desafíos, charlas eternas y un amor que creció sin pedir permiso.”
+                        "Dicen que algunas historias se escriben solas… la nuestra se escribió en risas, viajes, desafíos, charlas eternas y un amor que creció sin pedir permiso."
                     </p>
                 </motion.div>
 
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '40px', position: 'relative' }}>
-                    {/* Vertical Line for Desktop */}
-                    <div className="timeline-line"></div>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '50px', position: 'relative' }}>
+                    {/* Elegant Vertical Timeline Line */}
+                    <div style={{
+                        position: 'absolute',
+                        left: '50%',
+                        top: '40px',
+                        bottom: '40px',
+                        width: '2px',
+                        background: 'linear-gradient(to bottom, transparent, var(--color-gold), transparent)',
+                        transform: 'translateX(-50%)',
+                        zIndex: 0
+                    }}></div>
 
                     {stories.map((item, index) => (
                         <motion.div
                             key={index}
-                            initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-                            whileInView={{ opacity: 1, x: 0 }}
+                            initial={{ opacity: 0, y: 30 }}
+                            whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true, margin: "-100px" }}
                             transition={{ duration: 0.8 }}
                             style={{
@@ -70,26 +79,45 @@ const Story = () => {
                                 alignItems: 'center',
                                 textAlign: 'center',
                                 background: 'white',
-                                padding: '30px',
+                                padding: '35px 30px',
                                 borderRadius: '16px',
-                                boxShadow: '0 4px 20px rgba(0,0,0,0.03)',
+                                boxShadow: '0 4px 20px rgba(0,0,0,0.06)',
                                 position: 'relative',
-                                zIndex: 1
+                                zIndex: 1,
+                                maxWidth: '600px',
+                                margin: '0 auto',
+                                width: '100%'
                             }}
                         >
+                            {/* Timeline Dot */}
+                            <div style={{
+                                position: 'absolute',
+                                top: '-25px',
+                                left: '50%',
+                                transform: 'translateX(-50%)',
+                                width: '16px',
+                                height: '16px',
+                                borderRadius: '50%',
+                                background: 'var(--color-gold)',
+                                border: '3px solid white',
+                                boxShadow: '0 0 0 3px rgba(212, 175, 55, 0.2)',
+                                zIndex: 2
+                            }}></div>
+
                             <span style={{
                                 fontFamily: 'var(--font-serif)',
                                 fontSize: '2rem',
                                 color: 'var(--color-gold)',
-                                marginBottom: '10px',
-                                display: 'block'
+                                marginBottom: '12px',
+                                display: 'block',
+                                fontWeight: '300'
                             }}>
                                 {item.year}
                             </span>
-                            <h3 style={{ fontSize: '1.2rem', marginBottom: '10px' }}>{item.title}</h3>
-                            <p>{item.text}</p>
+                            <h3 style={{ fontSize: '1.3rem', marginBottom: '12px', color: 'var(--color-text-primary)' }}>{item.title}</h3>
+                            <p style={{ lineHeight: '1.6', color: 'var(--color-text-secondary)' }}>{item.text}</p>
                             {item.image && (
-                                <div style={{ marginTop: '20px', width: '100%', borderRadius: '8px', overflow: 'hidden' }}>
+                                <div style={{ marginTop: '25px', width: '100%', borderRadius: '12px', overflow: 'hidden' }}>
                                     <img
                                         src={item.image}
                                         alt={item.title}
@@ -103,7 +131,6 @@ const Story = () => {
                 </div>
             </div>
 
-            {/* Background decoration */}
             {/* Background decoration */}
             <img src="/images/13.png" alt="" style={{
                 position: 'absolute',
@@ -137,6 +164,19 @@ const Story = () => {
                 zIndex: 0,
                 pointerEvents: 'none'
             }} />
+
+            <style>{`
+                @media (max-width: 768px) {
+                    section#historia > div > div:last-child > div:first-child {
+                        left: 20px !important;
+                        transform: none !important;
+                    }
+                    section#historia > div > div:last-child > div > div:first-child {
+                        left: -28px !important;
+                        transform: none !important;
+                    }
+                }
+            `}</style>
         </section>
     );
 };

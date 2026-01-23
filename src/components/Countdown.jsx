@@ -35,7 +35,7 @@ const Countdown = () => {
     ];
 
     return (
-        <div style={{ display: 'flex', gap: '12px', justifyContent: 'center', marginTop: '20px' }}>
+        <div style={{ display: 'flex', gap: '15px', justifyContent: 'center', marginTop: '20px' }}>
             {timeUnits.map((unit, index) => (
                 <motion.div
                     key={index}
@@ -45,7 +45,7 @@ const Countdown = () => {
                     style={{ textAlign: 'center' }}
                 >
                     <div style={{
-                        fontSize: '1.8rem',
+                        fontSize: '2.2rem',
                         fontFamily: 'var(--font-ampersand)', /* Using The Seasons as requested */
                         color: 'var(--color-gold)',
                         fontWeight: 'normal', /* Serif fonts often look better regular */
@@ -54,13 +54,13 @@ const Countdown = () => {
                         {unit.value < 10 ? `0${unit.value}` : unit.value}
                     </div>
                     <div style={{
-                        fontSize: '0.65rem',
+                        fontSize: '0.7rem',
                         letterSpacing: '2px',
                         fontFamily: 'var(--font-body)', /* Open Sans */
                         fontWeight: '300', /* Light */
                         textTransform: 'uppercase',
                         color: 'var(--color-text-secondary)',
-                        marginTop: '5px'
+                        marginTop: '6px'
                     }}>
                         {unit.label}
                     </div>

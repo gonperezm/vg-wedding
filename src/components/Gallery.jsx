@@ -43,7 +43,13 @@ const Gallery = () => {
 
                 {/* Fotos y Videos / Hashtag - Placed as a footer to the gallery */}
                 <div className="text-center" style={{ marginTop: '80px', padding: '40px', background: 'var(--color-bg-warm)', borderRadius: '16px' }}>
-                    <h3 style={{ fontSize: '1.8rem', marginBottom: '15px' }}>Fotos y Videos 📸</h3>
+                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '12px', marginBottom: '15px' }}>
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="var(--color-gold)" style={{ opacity: 0.9 }}>
+                            <path d="M9 2L7.17 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2h-3.17L15 2H9zm3 15c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z" />
+                            <circle cx="12" cy="12" r="3" />
+                        </svg>
+                        <h3 style={{ fontSize: '1.8rem', margin: 0 }}>Fotos y Videos</h3>
+                    </div>
                     <p style={{ marginBottom: '20px' }}>“Tendremos fotógrafos profesionales, pero nos encantaría ver el día desde tu mirada.”</p>
                     <div style={{
                         display: 'inline-block',
